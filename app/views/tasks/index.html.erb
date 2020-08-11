@@ -1,0 +1,11 @@
+<h1>Welcome to your tasks!</h1>
+
+<% @tasks.each do |task| %>
+  <p><strong> <%= link_to task.title, task_path(task) %></strong>
+  <p> <% task.completed ? '❌':'✅'%></p>
+<% end %>
+
+
+
+<%= link_to "Add a new task", tasks_new_path  %>
+
